@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/apigateway/apigateway.iml" filepath="$PROJECT_DIR$/apigateway/apigateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/configservice/configservice.iml" filepath="$PROJECT_DIR$/configservice/configservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/discoveryservice/discoveryservice.iml" filepath="$PROJECT_DIR$/discoveryservice/discoveryservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/expenseservice/expenseservice.iml" filepath="$PROJECT_DIR$/expenseservice/expenseservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/oauth2service/oauth2service.iml" filepath="$PROJECT_DIR$/oauth2service/oauth2service.iml" />
     </modules>
   </component>
