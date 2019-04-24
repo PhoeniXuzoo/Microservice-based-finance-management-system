@@ -5,8 +5,8 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/Resurgam-Akane/SpringcloudConfig
-          search-paths: respo
+          uri: https://github.com/PhoeniXuzoo/Microservice-based-finance-management-system
+          search-paths: ConfigOnGithub
           username:
           password:
       label: master

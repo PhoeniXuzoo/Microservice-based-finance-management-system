@@ -6,15 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="accountservice" />
+        <module name="apigateway" />
         <module name="configservice" />
         <module name="discoveryservice" />
         <module name="Microservice-based Finance management system" />
+        <module name="oauth2service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="accountservice" target="1.8" />
+      <module name="apigateway" target="1.8" />
       <module name="configservice" target="1.8" />
       <module name="discoveryservice" target="1.8" />
       <module name="Microservice-based Finance management system" target="1.5" />
+      <module name="oauth2service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

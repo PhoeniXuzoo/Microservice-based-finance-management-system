@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>登录 | 个人财务管理系统</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet" />
+    <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.45/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.css" rel="stylesheet" />
+    <link href="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <script src="https://cdn.bootcss.com/moment.js/2.10.6/moment.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script><!--3.3.1-->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.45/js/bootstrap-datetimepicker.min.js"></script> <!--4.17.45-->
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.12.1/locale/bootstrap-table-zh-CN.js"></script>
+    <script src="https://cdn.bootcss.com/echarts/4.0.4/echarts.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+
+
+    <link href="/css/dashboard.css" type="text/css" rel="stylesheet" charset="utf-8"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+
+<body style="background-color: #f1f1f1; padding-bottom: 0">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">个人财务管理系统</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <div class="navbar-form navbar-right">
+                <!-- need modify-->
+                <a id="logoutbtn" class="btn btn-danger" href="/" style="display: none">退出登陆</a>
+                <a id="loginbtn" class="btn btn-success" href="/login">登录</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section id="loginpage">
+    <div id="loginpagediv" class="container" style="margin-top: 60px">
+
+        <div id="loginform" class="row" style="margin-top: 100px">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-console"></span> Login</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form method="post" autocomplete="off">
+                            <div class="form-group" style="margin-top: 30px">
+                                <div class="input-group col-md-6 col-md-offset-3">
+                                    <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                    <input type="text" class="form-control" name="username" id="username" placeholder="账号" />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="input-group col-md-6 col-md-offset-3">
+                                    <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="密码" />
+                                </div>
+                            </div>
+                            <br />
+                            <div>
+                                <p id="loginstatus" style="text-align: center" class="text-danger">欢迎使用</p>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group col-md-6 col-md-offset-3 col-xs-12 ">
+                                    <button id="loginbutton" type="button" class="btn btn-primary btn-block">登录</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group col-md-6 col-md-offset-3" style="text-align: center">
+                                    <a href="/register">创建账号</a> | 忘记密码?
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="mainpage">
+    <div id="mainpagediv" class="container-fluid" style="display: none">
+        <div class="row">
+            <div id="sidenav" class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li id="center" class="active"><a>个人中心</a></li>
+                    <li id="incomemanagement"><a>收入管理</a></li>
+                    <li id="expensemanagement"><a>支出管理</a></li>
+                    <li id="financemanagement"><a>理财管理</a></li>
+                    <li id="financialstatements"><a>财务报表</a></li>
+                    <li id="realassets"><a>实物资产</a></li>
+                </ul>
+            </div>
+            <div id="centerdiv" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header">个人中心</h1>
+
+                <div class="row placeholders">
+                    <div>
+                        <p class="text-left">更新时间：<span id="updateTime"></span> </p>
+                        <p class="text-left">储蓄金额：<span id="savingAmount"></span> </p>
+                        <p class="text-left" >姓名：<span id="name"></span> </p>
+                        <p class="text-left" >性别：<span id="sex"></span> </p>
+                        <p class="text-left" >年龄：<span id="age"></span> </p>
+                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#setPersonalInfoModal">修改个人信息</button>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="setPersonalInfoModal" tabindex="-1" role="dialog" aria-labelledby="setPersonalInfoModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="setPersonalInfoModalLabel">修改个人信息</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form method="post" autocomplete="off">
+                                    <div class="form-group" style="margin-top: 30px">
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                            <input type="text" class="form-control" name="setName" id="setName" placeholder="姓名" />
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <label for="setSex"></label>
+                                            <select name="setSex" id="setSex" class="selectpicker form-control">
+                                                <option value="未设置" selected="selected">未设置</option>
+                                                <option value="男">男</option>
+                                                <option value="女">女</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <input type="text" class="form-control" name="setAge" id="setAge" placeholder="年龄" />
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <input type="text" class="form-control" name="setSavingAmount" id="setSavingAmount" placeholder="储蓄金额" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                <button id="setPersonalInfoBtn" type="button" class="btn btn-primary" onclick="setPersonalInfo()">提交更改</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="incomemanagementdiv" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="display:none;">
+                <h1 class="page-header">收入管理</h1>
+
+                <div class="row placeholders">
+                    <div>
+                        <button class="btn btn-primary btn-lg pull-left" data-toggle="modal" data-target="#addIncomeItemModal">添加收入项</button>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+
+                        <p class="text-left">批量添加:<input id="addIncomeItemBatchFile" type="file" class="btn btn-default"/></p>
+                        <button id="addIncomeItemBatchFileBtn" type="button" class="btn btn-primary btn-lg pull-left" onclick="addIncomeItemBatch()">提交</button>
+
+                    </div>
+                </div>
+
+                <div class="modal fade" id="addIncomeItemModal" tabindex="-1" role="dialog" aria-labelledby="#addIncomeItemModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="addIncomeItemModalLabel">新建收入项</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form method="post" autocomplete="off">
+                                    <div class="form-group" style="margin-top: 30px">
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                            <input type="text" class="form-control" name="setIncomeItemName" id="setIncomeItemName" placeholder="收入项目名称" />
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <input type="text" class="form-control" name="setIncomeItemAmount" id="setIncomeItemAmount" placeholder="收入金额" />
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <label for="setIncomeItemMode"></label>
+                                            <select name="setIncomeItemMode" id="setIncomeItemMode" class="selectpicker form-control">
+                                                <option value="现金" selected="selected">现金</option>
+                                                <option value="支付宝">支付宝</option>
+                                                <option value="微信">微信</option>
+                                                <option value="银行">银行</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <label for="setIncomeItemSource"></label>
+                                            <select name="setIncomeItemSource" id="setIncomeItemSource" class="selectpicker form-control">
+                                                <option value="工资" selected="selected">工资</option>
+                                                <option value="租赁">租赁</option>
+                                                <option value="财产转让">财产转让</option>
+                                                <option value="礼金">礼金</option>
+                                                <option value="其他">其他</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <label for="setIncomeItemPeriod"></label>
+                                            <select name="setIncomeItemPeriod" id="setIncomeItemPeriod" class="selectpicker form-control">
+                                                <option value="一次性收入" selected="selected">一次性收入</option>
+                                                <option value="本月每天收入">本月每天收入</option>
+                                                <option value="每月收入">每月收入</option>
+                                                <option value="每季度收入">每季度收入</option>
+                                                <option value="每年收入">每年收入</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <div class='input-group' id='setIncomeItemDateTime'>
+                                                <input type='text' id="setIncomeItemTimePoint" placeholder="收入日期" class="form-control" />
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <input type="text" class="form-control" name="setIncomeItemInfo" id="setIncomeItemInfo" placeholder="备注信息" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="initAddIncomeModal()">关闭</button>
+                                <button id="addIncomesItemBtn" type="button" class="btn btn-primary" onclick="addIncomeItem()">提交</button>
+                                <button id="editIncomesItemBtn" type="button" class="btn btn-primary" onclick="editIncomeItem()" style="display: none">提交</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="sub-header">收入结构</h2>
+
+                <div class="row placeholders">
+                    <div class="input-group col-md-6 col-md-offset-3">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                        <label for="setIncomeStructureOfMonth"></label>
+                        <select name="setIncomeStructureOfMonth" id="setIncomeStructureOfMonth" class="selectpicker form-control">
+                            <option value="01">一月</option>
+                            <option value="02">二月</option>
+                            <option value="03">三月</option>
+                            <option value="04">四月</option>
+                            <option value="05">五月</option>
+                            <option value="06">六月</option>
+                            <option value="07">七月</option>
+                            <option value="08">八月</option>
+                            <option value="09">九月</option>
+                            <option value="10">十月</option>
+                            <option value="11">十一月</option>
+                            <option value="12">十二月</option>
+                        </select>
+                    </div>
+                    <br />
+
+                    <div id="incomeStructureOfMonth" class="col-xs-6 col-sm-6 placeholder" style="height: auto;width: auto;">
+                    </div>
+                    <br />
+
+                    <div class="input-group col-md-6 col-md-offset-5">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                        <div class='input-group' id='setIncomeTrendOfYear'>
+                            <input type='text' id="setIncomeTrendOfYearValue" placeholder="选择年份" class="form-control"/>
+                        </div>
+                    </div>
+                    <br />
+
+                    <div id="incomeTrendOfYear" class="col-xs-6 col-sm-6 placeholder">
+                    </div>
+                </div>
+
+                <h2 class="sub-header">收入项目明细</h2>
+                <div id="incometablediv" class="table-responsive">
+                    <table id="incomeTable"></table>
+                </div>
+            </div>
+            <div id="expensemanagementdiv" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="display:none;">
+                <h1 class="page-header">支出管理</h1>
+
+                <div class="row placeholders">
+                    <div>
+                        <button class="btn btn-primary btn-lg pull-left" data-toggle="modal" data-target="#addExpenseItemModal">添加支出项</button>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+
+                        <p class="text-left">批量添加:<input id="addExpenseItemBatchFile" type="file" class="btn btn-default"/></p>
+                        <button id="addExpenseItemBatchFileBtn" type="button" class="btn btn-primary btn-lg pull-left" onclick="addExpenseItemBatch()">提交</button>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="addExpenseItemModal" tabindex="-1" role="dialog" aria-labelledby="addExpenseItemModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="addExpenseItemModalLabel">新建支出项</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form method="post" autocomplete="off">
+                                    <div class="form-group" style="margin-top: 30px">
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                            <input type="text" class="form-control" name="setExpenseItemName" id="setExpenseItemName" placeholder="支出项目名称" />
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <input type="text" class="form-control" name="setExpenseItemAmount" id="setExpenseItemAmount" placeholder="支出金额" />
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <label for="setExpenseItemMode"></label>
+                                            <select name="setExpenseItemMode" id="setExpenseItemMode" class="selectpicker form-control">
+                                                <option value="现金" selected="selected">现金</option>
+                                                <option value="支付宝">支付宝</option>
+                                                <option value="微信">微信</option>
+                                                <option value="银行">银行</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <label for="setExpenseItemSource"></label>
+                                            <select name="setExpenseItemSource" id="setExpenseItemSource" class="selectpicker form-control">
+                                                <option value="交通" selected="selected">交通</option>
+                                                <option value="租赁">租赁</option>
+                                                <option value="教育">教育</option>
+                                                <option value="衣服">衣服</option>
+                                                <option value="饮食">饮食</option>
+                                                <option value="旅游">旅游</option>
+                                                <option value="运动">运动</option>
+                                                <option value="医疗">医疗</option>
+                                                <option value="水电费">水电费</option>
+                                                <option value="其他">其他</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <label for="setExpenseItemPeriod"></label>
+                                            <select name="setExpenseItemPeriod" id="setExpenseItemPeriod" class="selectpicker form-control">
+                                                <option value="一次性支出" selected="selected">一次性支出</option>
+                                                <option value="本月每天支出">本月每天支出</option>
+                                                <option value="每月支出">每月支出</option>
+                                                <option value="每季度支出">每季度支出</option>
+                                                <option value="每年支出">每年支出</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <div class='input-group' id='setExpenseItemDateTime'>
+                                                <input type='text' id="setExpenseItemTimePoint" class="form-control" placeholder="支出日期"/>
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <input type="text" class="form-control" name="setExpenseItemInfo" id="setExpenseItemInfo" placeholder="备注信息" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="initAddExpenseModal()">关闭</button>
+                                <button id="addExpensesItemBtn" type="button" class="btn btn-primary" onclick="addExpenseItem()">提交</button>
+                                <button id="editExpensesItemBtn" type="button" class="btn btn-primary" onclick="editExpenseItem()" style="display: none">提交</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="sub-header">支出结构</h2>
+
+                <div class="row placeholders">
+                    <div class="input-group col-md-6 col-md-offset-3">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                        <label for="setExpenseStructureOfMonth"></label>
+                        <select name="setExpenseStructureOfMonth" id="setExpenseStructureOfMonth" class="selectpicker form-control">
+                            <option value="01">一月</option>
+                            <option value="02">二月</option>
+                            <option value="03">三月</option>
+                            <option value="04">四月</option>
+                            <option value="05">五月</option>
+                            <option value="06">六月</option>
+                            <option value="07">七月</option>
+                            <option value="08">八月</option>
+                            <option value="09">九月</option>
+                            <option value="10">十月</option>
+                            <option value="11">十一月</option>
+                            <option value="12">十二月</option>
+                        </select>
+                    </div>
+                    <br />
+                    <!-- 包括 重要支出（金额较大）、收入分布饼状图、收入折线图（日、月、年） -->
+                    <div id="expenseStructureOfMonth" class="col-xs-6 col-sm-6 placeholder" style="height: auto;width: auto;">
+                    </div>
+                    <br />
+
+                    <div class="input-group col-md-6 col-md-offset-5">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                        <div class='input-group' id='setExpenseTrendOfYear'>
+                            <input type='text' id="setExpenseTrendOfYearValue" placeholder="选择年份" class="form-control"/>
+                        </div>
+                    </div>
+                    <br />
+
+                    <div id="expenseTrendOfYear" class="col-xs-6 col-sm-6 placeholder">
+                    </div>
+                </div>
+
+                <h2 class="sub-header">支出项目明细</h2>
+                <div id="expensetablediv" class="table-responsive">
+                    <table id="expenseTable"></table>
+                </div>
+
+            </div>
+            <div id="financemanagementdiv" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="display:none;">
+                <h1 class="page-header">理财管理</h1>
+
+                <div class="row placeholders">
+                    <div>
+                        <button class="btn btn-primary btn-lg pull-left" data-toggle="modal" data-target="#addFinanceItemModal">添加理财项</button>
+                        <button id="getFinanceDataFromMicroFinanceAppBtn" class="btn btn-primary btn-lg pull-left" type="button" onclick="GetFinanceDataFromMicroFinanceApp()">导入微理财数据</button>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="addFinanceItemModal" tabindex="-1" role="dialog" aria-labelledby="addFinanceItemModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="addFinanceItemModalLabel">新建理财项</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form method="post" autocomplete="off">
+                                    <div class="form-group" style="margin-top: 30px">
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                            <input type="text" class="form-control" name="setFinanceItemName" id="setFinanceItemName" placeholder="理财项目名称" />
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <label for="setFinanceItemKind"></label>
+                                            <select name="setFinanceItemKind" id="setFinanceItemKind" class="selectpicker form-control">
+                                                <option value="股票" selected="selected">股票</option>
+                                                <option value="基金">基金</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <label for="setFinanceItemOutOrIn"></label>
+                                            <select name="setFinanceItemOutOrIn" id="setFinanceItemOutOrIn" class="selectpicker form-control">
+                                                <option value="买入" selected="selected">买入</option>
+                                                <option value="卖出">卖出</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <input type="text" class="form-control" name="setFinanceItemPerPrice" id="setFinanceItemPerPrice" placeholder="单价" />
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <input type="text" class="form-control" name="setFinanceItemAmount" id="setFinanceItemAmount" placeholder="数量" />
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <div class='input-group' id='setFinanceItemDateTime'>
+                                                <input type='text' id="setFinanceItemTimePoint" class="form-control" placeholder="日期"/>
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <input type="text" class="form-control" name="setFinanceItemInfo" id="setFinanceItemInfo" placeholder="备注信息" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="initFinanceModal()">关闭</button>
+                                <button id="addFinanceItemBtn" type="button" class="btn btn-primary" onclick="addFinanceItem()">提交</button>
+                                <button id="editFinanceItemBtn" type="button" class="btn btn-primary" onclick="editFinanceItem()" style="display: none">提交</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="sub-header">理财项目</h2>
+
+                <div class="row placeholders">
+                    <div class="input-group col-md-6 col-md-offset-3">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                        <label for="setFinanceItemNameOfSelectLabel"></label>
+                        <select name="setFinanceItemNameOfSelectLabel" id="setFinanceItemNameOfSelectLabel" class="selectpicker form-control">
+                        </select>
+                    </div>
+                    <br />
+
+                    <div id="oneFinancePic" class="col-xs-6 col-sm-6 placeholder" style="height: auto;width: auto;">
+                    </div>
+                </div>
+
+                <div id="financetablediv" class="table-responsive">
+                    <table id="financeTable"></table>
+                </div>
+            </div>
+            <div id="financialstatementsdiv" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="display:none;">
+                <h1 class="page-header">财务报表</h1>
+
+                <div class="row placeholders">
+                    <div>
+                        <button class="btn btn-primary btn-lg pull-left" onclick="downloadStatisticFile()">下载财务报表</button>
+                    </div>
+                </div>
+
+                <h2 class="sub-header">财务报表明细</h2>
+                <div id="incometabledivInStatistic" class="table-responsive">
+                    <table id="incomeTableInStatistic"></table>
+                </div>
+
+                <div id="expensetabledivInStatistic" class="table-responsive">
+                    <table id="expenseTableInStatistic"></table>
+                </div>
+
+                <div id="realAssetstabledivInStatistic" class="table-responsive">
+                    <table id="realAssetsTableInStatistic"></table>
+                </div>
+            </div>
+            <div id="realassetsdiv" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="display:none;">
+                <h1 class="page-header">实物资产</h1>
+
+                <div class="row placeholders">
+                    <div>
+                        <button class="btn btn-primary btn-lg pull-left" data-toggle="modal" data-target="#addRealAssetsItemModal">添加实物资产项</button>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="addRealAssetsItemModal" tabindex="-1" role="dialog" aria-labelledby="addRealAssetsItemModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="addRealAssetsItemModalLabel">新建实物资产项</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form method="post" autocomplete="off">
+                                    <div class="form-group" style="margin-top: 30px">
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                            <input type="text" class="form-control" name="setRealAssetsItemName" id="setRealAssetsItemName" placeholder="实物资产项目名称" />
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <input type="text" class="form-control" name="setRealAssetsItemAmount" id="setRealAssetsItemAmount" placeholder="价值" />
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <div class='input-group' id='setRealAssetsItemDateTime'>
+                                                <input type='text' id="setRealAssetsItemTimePoint" class="form-control" placeholder="日期"/>
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-md-6 col-md-offset-3">
+                                            <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                                            <input type="text" class="form-control" name="setRealAssetsItemInfo" id="setRealAssetsItemInfo" placeholder="备注信息" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="initRealAssetsModal()">关闭</button>
+                                <button id="addRealAssetsItemBtn" type="button" class="btn btn-primary" onclick="addRealAssetsItem()">提交</button>
+                                <button id="editRealAssetsItemBtn" type="button" class="btn btn-primary" onclick="editRealAssetsItem()" style="display: none">提交</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="sub-header">实物资产</h2>
+
+                <div class="row placeholders">
+                    <div class="input-group col-md-6 col-md-offset-3">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></div>
+                        <label for="setRealAssetsItemNameOfSelectLabel"></label>
+                        <select name="setRealAssetsItemNameOfSelectLabel" id="setRealAssetsItemNameOfSelectLabel" class="selectpicker form-control">
+                        </select>
+                    </div>
+                    <br />
+
+                    <div id="oneRealAssetsPic" class="col-xs-6 col-sm-6 placeholder" style="height: auto;width: auto;">
+                    </div>
+                </div>
+
+                <div id="realassetstablediv" class="table-responsive">
+                    <table id="realassetsTable"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="/main.js" charset="utf-8"></script>
+
+</body>
+
+</html>
