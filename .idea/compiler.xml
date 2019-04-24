@@ -15,6 +15,8 @@
         <module name="incomeservice" />
         <module name="Microservice-based Finance management system" />
         <module name="oauth2service" />
+        <module name="realassetsservice" />
+        <module name="statisticservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -28,6 +30,8 @@
       <module name="incomeservice" target="1.8" />
       <module name="Microservice-based Finance management system" target="1.5" />
       <module name="oauth2service" target="1.8" />
+      <module name="realassetsservice" target="1.8" />
+      <module name="statisticservice" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

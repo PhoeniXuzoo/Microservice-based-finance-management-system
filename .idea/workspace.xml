@@ -13,6 +13,8 @@
     <ignored path="$PROJECT_DIR$/incomeservice/target/" />
     <ignored path="$PROJECT_DIR$/financialproductservice/target/" />
     <ignored path="$PROJECT_DIR$/financeproductservice/target/" />
+    <ignored path="$PROJECT_DIR$/realassetsservice/target/" />
+    <ignored path="$PROJECT_DIR$/statisticservice/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +23,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="StatisticController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/controller/StatisticController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StatisticserviceApplication.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/StatisticserviceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -49,37 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/accountservice/src/main/java/cn/phoenixuzoo/accountservice/doamin/TimePeriod.java" />
-        <option value="$PROJECT_DIR$/accountservice/src/main/java/cn/phoenixuzoo/accountservice/DAO/AccountDAO.java" />
-        <option value="$PROJECT_DIR$/accountservice/src/main/java/cn/phoenixuzoo/accountservice/service/AccountService.java" />
-        <option value="$PROJECT_DIR$/accountservice/src/main/java/cn/phoenixuzoo/accountservice/service/AccountServiceImpl.java" />
-        <option value="$PROJECT_DIR$/accountservice/src/main/java/cn/phoenixuzoo/accountservice/service/CustomUserInfoTokenServices.java" />
-        <option value="$PROJECT_DIR$/accountservice/src/main/java/cn/phoenixuzoo/accountservice/controller/AccountController.java" />
-        <option value="$PROJECT_DIR$/accountservice/src/main/java/cn/phoenixuzoo/accountservice/config/AuthConfig.java" />
-        <option value="$PROJECT_DIR$/expenseservice/pom.xml" />
-        <option value="$PROJECT_DIR$/expenseservice/src/main/resources/bootstrap.properties" />
-        <option value="$PROJECT_DIR$/expenseservice/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/ExpenseserviceApplication.java" />
-        <option value="$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/domain/Account.java" />
-        <option value="$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/domain/Item.java" />
-        <option value="$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/DAO/AccountDAO.java" />
-        <option value="$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/service/ExpenseService.java" />
-        <option value="$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/service/ExpenseServiceImpl.java" />
-        <option value="$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/service/ExpensesService.java" />
-        <option value="$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/service/ExpensesServiceImpl.java" />
-        <option value="$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/controller/ExpenseController.java" />
-        <option value="$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/config/AuthConfig.java" />
-        <option value="$PROJECT_DIR$/apigateway/pom.xml" />
-        <option value="$PROJECT_DIR$/incomeservice/pom.xml" />
-        <option value="$PROJECT_DIR$/incomeservice/src/main/resources/bootstrap.properties" />
-        <option value="$PROJECT_DIR$/incomeservice/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/IncomeserviceApplication.java" />
-        <option value="$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/domain/Account.java" />
-        <option value="$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/domain/Item.java" />
-        <option value="$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/domain/TimePeriod.java" />
-        <option value="$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/DAO/AccountDAO.java" />
-        <option value="$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/service/IncomesService.java" />
-        <option value="$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/service/IncomesServiceImpl.java" />
         <option value="$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/controller/IncomeController.java" />
         <option value="$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/config/AuthConfig.java" />
         <option value="$PROJECT_DIR$/financialproductservice/pom.xml" />
@@ -100,6 +94,37 @@
         <option value="$PROJECT_DIR$/financeproductservice/src/main/java/cn/phoenixuzoo/financeproductservice/client/IncomeClient.java" />
         <option value="$PROJECT_DIR$/financeproductservice/src/main/java/cn/phoenixuzoo/financeproductservice/client/ExpenseClient.java" />
         <option value="$PROJECT_DIR$/financeproductservice/src/main/java/cn/phoenixuzoo/financeproductservice/config/AuthConfig.java" />
+        <option value="$PROJECT_DIR$/realassetsservice/pom.xml" />
+        <option value="$PROJECT_DIR$/realassetsservice/src/main/resources/bootstrap.properties" />
+        <option value="$PROJECT_DIR$/realassetsservice/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/realassetsservice/src/main/java/cn/phoenixuzoo/realassetsservice/RealassetsserviceApplication.java" />
+        <option value="$PROJECT_DIR$/realassetsservice/src/main/java/cn/phoenixuzoo/realassetsservice/domain/Account.java" />
+        <option value="$PROJECT_DIR$/realassetsservice/src/main/java/cn/phoenixuzoo/realassetsservice/domain/Item.java" />
+        <option value="$PROJECT_DIR$/realassetsservice/src/main/java/cn/phoenixuzoo/realassetsservice/service/RealAssetsService.java" />
+        <option value="$PROJECT_DIR$/realassetsservice/src/main/java/cn/phoenixuzoo/realassetsservice/DAO/AccountDAO.java" />
+        <option value="$PROJECT_DIR$/realassetsservice/src/main/java/cn/phoenixuzoo/realassetsservice/service/RealAssetsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/realassetsservice/src/main/java/cn/phoenixuzoo/realassetsservice/controller/RealAssetsController.java" />
+        <option value="$PROJECT_DIR$/realassetsservice/src/main/java/cn/phoenixuzoo/realassetsservice/config/AuthConfig.java" />
+        <option value="$PROJECT_DIR$/statisticservice/pom.xml" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/resources/bootstrap.properties" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/StatisticserviceApplication.java" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/domain/ExpenseItem.java" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/domain/FinanceProductItem.java" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/domain/IncomeItem.java" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/domain/RealAssetsItem.java" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/service/StatisticService.java" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/service/StatisticServiceImpl.java" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/config/AuthConfig.java" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/client/ExpenseClient.java" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/client/expenseClientFallback.java" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/client/financeProductClientFallback.java" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/client/FinanceProductClient.java" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/client/incomeClientFallback.java" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/client/IncomeClient.java" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/client/realAssetsClientFallback.java" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/client/RealAssetsClient.java" />
+        <option value="$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/controller/StatisticController.java" />
       </list>
     </option>
   </component>
@@ -205,7 +230,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.FinanceproductserviceApplication">
+  <component name="RunManager" selected="Spring Boot.StatisticserviceApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -297,6 +322,18 @@
       <module name="oauth2service" />
       <envs />
     </configuration>
+    <configuration name="RealassetsserviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.phoenixuzoo.realassetsservice.RealassetsserviceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <module name="realassetsservice" />
+      <envs />
+    </configuration>
+    <configuration name="StatisticserviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.phoenixuzoo.statisticservice.StatisticserviceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <module name="statisticservice" />
+      <envs />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -309,15 +346,17 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
-    <list size="8">
+    <list size="10">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.DiscoveryserviceApplication" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.ApigatewayApplication" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.ExpenseserviceApplication" />
       <item index="3" class="java.lang.String" itemvalue="Spring Boot.FinanceproductserviceApplication" />
-      <item index="4" class="java.lang.String" itemvalue="Spring Boot.IncomeserviceApplication" />
-      <item index="5" class="java.lang.String" itemvalue="Spring Boot.AccountserviceApplication" />
-      <item index="6" class="java.lang.String" itemvalue="Spring Boot.ConfigserviceApplication" />
-      <item index="7" class="java.lang.String" itemvalue="Spring Boot.Oauth2serviceApplication" />
+      <item index="4" class="java.lang.String" itemvalue="Spring Boot.RealassetsserviceApplication" />
+      <item index="5" class="java.lang.String" itemvalue="Spring Boot.StatisticserviceApplication" />
+      <item index="6" class="java.lang.String" itemvalue="Spring Boot.IncomeserviceApplication" />
+      <item index="7" class="java.lang.String" itemvalue="Spring Boot.AccountserviceApplication" />
+      <item index="8" class="java.lang.String" itemvalue="Spring Boot.ConfigserviceApplication" />
+      <item index="9" class="java.lang.String" itemvalue="Spring Boot.Oauth2serviceApplication" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -330,12 +369,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556087065106</updated>
-      <workItem from="1556087075849" duration="16049000" />
+      <workItem from="1556087075849" duration="18759000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16049000" />
+    <option name="totallyTimeSpent" value="18759000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -421,270 +460,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/accountservice/src/main/resources/bootstrap.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accountservice/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configservice/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseservice/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="98" column="18" lean-forward="true" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/ExpenseserviceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/domain/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/domain/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/DAO/AccountDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="52" lean-forward="false" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/service/ExpenseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="13" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/service/ExpenseServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/config/AuthConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/controller/ExpenseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-276">
-          <caret line="3" column="46" lean-forward="false" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/service/ExpensesServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="251" column="21" lean-forward="true" selection-start-line="251" selection-start-column="21" selection-end-line="251" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseservice/src/main/java/cn/phoenixuzoo/expenseservice/service/ExpensesService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseservice/src/main/resources/bootstrap.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseservice/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apigateway/src/main/java/cn/phoenixuzoo/apigateway/ApigatewayApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apigateway/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/incomeservice/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/incomeservice/src/main/resources/bootstrap.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/IncomeserviceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/incomeservice/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="46" lean-forward="false" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/domain/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="50" column="1" lean-forward="false" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/domain/TimePeriod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/domain/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/service/IncomesService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="48" lean-forward="false" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/DAO/AccountDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="51" lean-forward="false" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/service/IncomesServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1955">
-          <caret line="2" column="51" lean-forward="false" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/controller/IncomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="59" lean-forward="false" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/incomeservice/src/main/java/cn/phoenixuzoo/incomeservice/config/AuthConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/financialproductservice/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1790">
-          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/financialproductservice/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -859,6 +634,292 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/realassetsservice/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1997">
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/realassetsservice/src/main/java/cn/phoenixuzoo/realassetsservice/domain/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="59" column="9" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/realassetsservice/src/main/java/cn/phoenixuzoo/realassetsservice/domain/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="68" column="1" lean-forward="false" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/realassetsservice/src/main/java/cn/phoenixuzoo/realassetsservice/config/AuthConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/realassetsservice/src/main/java/cn/phoenixuzoo/realassetsservice/DAO/AccountDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/realassetsservice/src/main/java/cn/phoenixuzoo/realassetsservice/controller/RealAssetsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/realassetsservice/src/main/java/cn/phoenixuzoo/realassetsservice/service/RealAssetsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/realassetsservice/src/main/java/cn/phoenixuzoo/realassetsservice/service/RealAssetsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="52" lean-forward="false" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/realassetsservice/src/main/java/cn/phoenixuzoo/realassetsservice/RealassetsserviceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/realassetsservice/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/realassetsservice/src/main/resources/bootstrap.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/resources/bootstrap.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="68" lean-forward="false" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="35" lean-forward="true" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/domain/ExpenseItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="78" column="1" lean-forward="false" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/domain/FinanceProductItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="89" column="1" lean-forward="false" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/domain/IncomeItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="70" column="1" lean-forward="false" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/domain/RealAssetsItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1150">
+          <caret line="62" column="1" lean-forward="false" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/service/StatisticService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="48" lean-forward="false" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/service/StatisticServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="48" lean-forward="false" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/config/AuthConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/client/realAssetsClientFallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/client/RealAssetsClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/client/incomeClientFallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/client/IncomeClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/client/financeProductClientFallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/client/FinanceProductClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/client/expenseClientFallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/client/ExpenseClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="71" lean-forward="false" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/controller/StatisticController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticservice/src/main/java/cn/phoenixuzoo/statisticservice/StatisticserviceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
           <folding />
         </state>
       </provider>

@@ -11,6 +11,8 @@
       <module fileurl="file://$PROJECT_DIR$/financeproductservice/financeproductservice.iml" filepath="$PROJECT_DIR$/financeproductservice/financeproductservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/incomeservice/incomeservice.iml" filepath="$PROJECT_DIR$/incomeservice/incomeservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/oauth2service/oauth2service.iml" filepath="$PROJECT_DIR$/oauth2service/oauth2service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realassetsservice/realassetsservice.iml" filepath="$PROJECT_DIR$/realassetsservice/realassetsservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/statisticservice/statisticservice.iml" filepath="$PROJECT_DIR$/statisticservice/statisticservice.iml" />
     </modules>
   </component>
 </project>
