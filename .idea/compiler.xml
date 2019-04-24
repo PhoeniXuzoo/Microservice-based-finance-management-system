@@ -11,6 +11,7 @@
         <module name="configservice" />
         <module name="discoveryservice" />
         <module name="expenseservice" />
+        <module name="incomeservice" />
         <module name="Microservice-based Finance management system" />
         <module name="oauth2service" />
       </profile>
@@ -21,6 +22,7 @@
       <module name="configservice" target="1.8" />
       <module name="discoveryservice" target="1.8" />
       <module name="expenseservice" target="1.8" />
+      <module name="incomeservice" target="1.8" />
       <module name="Microservice-based Finance management system" target="1.5" />
       <module name="oauth2service" target="1.8" />
     </bytecodeTargetLevel>
