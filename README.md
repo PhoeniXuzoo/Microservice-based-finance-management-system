@@ -25,6 +25,8 @@ Port:8889
 
 This module offers Service Discovery function. You can access localhost:8889 to accquire information about other instances, including name, port, status and so on. Every instance will register at localhost:8889/eureka and know the status of other instances at ，http://localhost:8889/serviceregistry/instance-status.
 
+![instances](./images/instances.png)
+
 In this system, the first application started is Discovery Service.
 
 2.**Config Service**
@@ -44,9 +46,13 @@ in bootstrap.properties, it will get some key parameters at [ConfigOnGithub](htt
 
 Port:8882
 
+![login](./images/login.png)
+
 Oauth2 is a protocol which allows third-party applications to grant limited access to an HTTP service. Oauth2 Service implements functions of registration, login, and authority management. There is a key topic about authority management.
 
-if Service A wants to access the resources which belongs to Service B, A has to accquire an access code from Oauth2 Service. Some details can be found at [Spring Cloud Security](https://spring.io/projects/spring-cloud-security) and [Oauth2](https://oauth.net/2)
+if Service A wants to access the resources which belongs to Service B, A has to accquire an access code from Oauth2 Service. Some details can be found at [Spring Cloud Security](https://spring.io/projects/spring-cloud-security) and [Oauth2](https://oauth.net/2). If you do not own a right access code, your request will be blocked.
+
+![unauthorized](./images/unauthorized.png)
 
 4.**APIGateway**
 
@@ -78,15 +84,24 @@ This module deal with basic information about users, including name, update time
 
 Port:10000
 
-This module offer the function of income management. You can create an income item with some properties, such as name, value, type, source, frequency, time point and additional information. It is also convenient for you to use a .xls file to upload a series of income data. Pie chart and line chart on the webpage can help you understand your structure of income. In the income table, you can search or modify or delete an income item.
+An example of adding an income item.
+![addanincomeitem](./images/addanincomeitem.png)
+
+This module offer the function of income management. You can create an income item with some properties, such as name, value, type, source, frequency, time point and additional information. It is also convenient for you to use a .xls file to upload a series of income data. A Pie chart and a line chart on the webpage can help you understand your structure of income. In the income table, you can search or modify or delete an income item.
 
 7.**Expenses Service**
 
 Port:10010
 
+An example of a line chart.
+![linechart](./images/linechart.png)
+
 8.**Finance Product Service**
 
 Port:10030
+
+An example of an income table.
+![incometable](./images/incometable.png)
 
 9.**Real Assets Service**
 
@@ -97,6 +112,8 @@ Port:10040
 Port:10050
 
 Statistic Service use [Spring Cloud OpenFeign](https://spring.io/projects/spring-cloud-openfeign) to accquire resources from Income Service, Expenses Service, Finance Product Service, Real Assets Service, Account Service by calling their RESTful APIs. Statistic Service use data to generate a .xls file for downloading.
+
+![statistic](./images/statistic.png)
 
 If there is a failure in calling RESTful APIs, Hystrix will stop the failure affecting other services. This kind of failure will not the generation process of .xls.
 
