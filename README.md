@@ -46,6 +46,20 @@ if Service A wants to access the resources which belongs to Service B, A has to 
 
 4.**APIGateway**
 
+port:9990
+
+APIGateway implements Routing. The routing table is:
+
+
+| service-id or url| path |
+| :---------- | :---------- |
+| http://localhost:8882 | /uaa/** |
+| accountservice | /accounts/** |
+| incomeservice | /incomes/** |
+| expenseservice | /expenses/** |
+| realassetsservice | /realassets/** |
+| statisticservice | /statistics/** |
+
 5.**Account Service**
 
 6.**Income Service**
