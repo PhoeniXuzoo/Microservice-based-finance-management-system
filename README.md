@@ -13,6 +13,10 @@ This project is a microservice-based finance management system. You can use this
 - Feign
 - Hystrix
 
+## Structure of backend
+
+
+
 ## Modules
 
 1.**Discovery Service**
@@ -96,3 +100,23 @@ Statistic Service use [Spring Cloud OpenFeign](https://spring.io/projects/spring
 
 If there is a failure in calling RESTful APIs, Hystrix will stop the failure affecting other services. This kind of failure will not the generation process of .xls.
 
+## Main Technology used in this project
+
+<ul>
+	<li>Java</li>
+	<li>Spring Boot</li>
+	<li>
+		Spring Cloud
+		<ul>
+			<li>Spring Cloud Eureka</li>
+			<li>Spring Cloud Config</li>
+			<li>Spring Cloud Zuul</li>
+			<li>Spring Cloud Security</li>
+			<li>Spring Cloud OpenFeign</li>
+			<li>Spring Cloud Hystrix</li>
+		</ul>
+	</li>
+	<li>Mongo</li>
+	<li>apache.poi</li>
+	<li>Bootstrop3, Echarts, JavaScript, Ajax, HTML</li>
+</ul>
