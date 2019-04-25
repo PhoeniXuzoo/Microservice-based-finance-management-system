@@ -13,9 +13,13 @@ This project is a microservice-based finance management system. You can use this
 - Feign
 - Hystrix
 
-## Structure of backend
+## Architecture of backend
 
+![ServerArchitecture](./images/ServerArchitecture.png)
 
+## Layer of system
+
+![layerofsystem](./images/layerofsystem.png)
 
 ## Modules
 
