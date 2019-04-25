@@ -66,12 +66,33 @@ Any request from users will be sent to APIGateway, and then, this service will r
 
 5.**Account Service**
 
+Port:8881
+
+This module deal with basic information about users, including name, update time, genre, age and so on. It use 3-tier architecture. The upper layer is RESTcontroller, the middle layer is Business Logic Layer, and the low-level layer is Data access layer. 
+
 6.**Income Service**
+
+Port:10000
+
+This module offer the function of income management. You can create an income item with some properties, such as name, value, type, source, frequency, time point and additional information. It is also convenient for you to use a .xls file to upload a series of income data. Pie chart and line chart on the webpage can help you understand your structure of income. In the income table, you can search or modify or delete an income item.
 
 7.**Expenses Service**
 
+Port:10010
+
 8.**Finance Product Service**
+
+Port:10030
 
 9.**Real Assets Service**
 
+Port:10040
+
 10.**Statistic Service**
+
+Port:10050
+
+Statistic Service use [Spring Cloud OpenFeign](https://spring.io/projects/spring-cloud-openfeign) to accquire resources from Income Service, Expenses Service, Finance Product Service, Real Assets Service, Account Service by calling their RESTful APIs. Statistic Service use data to generate a .xls file for downloading.
+
+If there is a failure in calling RESTful APIs, Hystrix will stop the failure affecting other services. This kind of failure will not the generation process of .xls.
+
