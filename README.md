@@ -53,12 +53,16 @@ APIGateway implements Routing. The routing table is:
 
 | service-id or url| path |
 | :---------- | :---------- |
-| http://localhost:8882 | /uaa/** |
+| localhost:8882 | /uaa/** |
 | accountservice | /accounts/** |
 | incomeservice | /incomes/** |
 | expenseservice | /expenses/** |
 | realassetsservice | /realassets/** |
 | statisticservice | /statistics/** |
+
+There is a simple example. If a user access localhost:9990/statistics/**, then this request will be sent to Statistic Service. APIGateway can get address and port of Statistic Service from Discovery Service. If there are three instances of Statistic Service, APIGateway will adopt *Polling* strategy to implement *Load Balancing*.
+
+Any request from users will be sent to APIGateway, and then, this service will route the request to other Services. When a service complete a task, the result of the task will be sent to APIGateway. At last, APIGateway send the response to users. For users, they do not know existence of other Services, they feel like that APIGateway deals with all of requests.
 
 5.**Account Service**
 
