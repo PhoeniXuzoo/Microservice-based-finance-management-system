@@ -139,5 +139,5 @@ If there is a failure in calling RESTful APIs, Hystrix will stop the failure aff
 	</li>
 	<li>Mongo</li>
 	<li>apache.poi</li>
-	<li>Bootstrop3, Echarts, JavaScript, Ajax, HTML</li>
+	<li>Bootstrap3, Echarts, JavaScript, Ajax, HTML</li>
 </ul>
